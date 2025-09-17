@@ -5,7 +5,7 @@ import json
 
 class PLC_HMI_LISTENER(Node):
     def __init__(self):
-        super().__init__('warehouse_eavesdropper')
+        super().__init__('plc_hmi_listener')
 
         self.subscription = self.create_subscription(
             String,
