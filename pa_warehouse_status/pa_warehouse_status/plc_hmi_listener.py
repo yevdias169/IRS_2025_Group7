@@ -3,7 +3,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 import json
 
-class WarehouseEavesDropper(Node):
+class PLC_HMI_LISTENER(Node):
     def __init__(self):
         super().__init__('warehouse_eavesdropper')
 
@@ -35,9 +35,9 @@ class WarehouseEavesDropper(Node):
 
 def main (args=None):
     rclpy.init(args=args)
-    warehouse_eavesdropper = WarehouseEavesDropper()
-    rclpy.spin(warehouse_eavesdropper)
-    warehouse_eavesdropper.destroy_node()
+    plc_hmi_listener = PLC_HMI_LISTENER()
+    rclpy.spin(plc_hmi_listener)
+    plc_hmi_listener.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

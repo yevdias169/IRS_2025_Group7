@@ -1,0 +1,50 @@
+====Commit History (Bottom to top)=====
+
+* 1219962 (HEAD -> main, origin/main, origin/HEAD) Modified subscriber for JSON parsing
+* c54ddcf modified the subscriber file
+* 6732e6f modified the publisher file
+* 1fe534e Initial commit
+
+=====Detailed commit history (Bottom to top)======
+
+commit 12199625c46544e7bf3c6e14be628fb2d36e24d4 (HEAD -> main, origin/main, origin/HEAD)
+Author: Yevin <yevindias@protonmail.com>
+Date:   Wed Sep 17 14:19:30 2025 +1000
+
+    Modified subscriber for JSON parsing
+
+M       pa_warehouse_status/pa_warehouse_status/plc_hmi_listener.py
+
+commit c54ddcf3d2be6cac3d2fc87b8865c4aa55b4e05a
+Author: Yevin <yevindias@protonmail.com>
+Date:   Wed Sep 17 14:08:20 2025 +1000
+
+    modified the subscriber file
+
+A       pa_warehouse_status/pa_warehouse_status/plc_hmi_listener.py
+M       pa_warehouse_status/setup.py
+
+commit 6732e6f44bacb53e228ed1f32d0c1f1d58cc5224
+Author: Yevin <yevindias@protonmail.com>
+Date:   Wed Sep 17 13:49:54 2025 +1000
+
+    modified the publisher file
+
+A       pa_warehouse_status/LICENSE
+A       pa_warehouse_status/pa_warehouse_status/__init__.py
+A       pa_warehouse_status/pa_warehouse_status/pineapple_gossip_bot.py
+A       pa_warehouse_status/package.xml
+A       pa_warehouse_status/resource/pa_warehouse_status
+A       pa_warehouse_status/setup.cfg
+A       pa_warehouse_status/setup.py
+A       pa_warehouse_status/test/test_copyright.py
+A       pa_warehouse_status/test/test_flake8.py
+A       pa_warehouse_status/test/test_pep257.py
+
+commit 1fe534e0874dfae534544ea8e7a06dff057d6f34
+Author: yevdias169 <yevindias@protonmail.com>
+Date:   Wed Sep 17 13:02:12 2025 +1000
+
+    Initial commit
+
+A       README.md
