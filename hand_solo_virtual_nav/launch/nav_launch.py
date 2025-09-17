@@ -118,9 +118,9 @@ def generate_launch_description():
 
     # Waypoint Follower - Lifecycle Node
     waypoint_follower = LifecycleNode(
-        package='nav2_waypoint_follower',
-        executable='waypoint_follower',
-        name='waypoint_follower',
+        package='hand_solo_virtual_nav',
+        executable='hs_waypoint_follower',
+        name='hs_waypoint_follower',
         namespace='',
         output='screen',
         parameters=[
@@ -145,7 +145,6 @@ def generate_launch_description():
             ('cmd_vel_smoothed', 'cmd_vel')
         ]
     )
-
     # Lifecycle Manager for Localization
     lifecycle_manager_localization = Node(
         package='nav2_lifecycle_manager',
@@ -173,11 +172,12 @@ def generate_launch_description():
                 'planner_server',
                 'behavior_server',
                 'bt_navigator',
-                'waypoint_follower',
+                'hs_waypoint_follower',
                 'velocity_smoother'
             ]}
         ]
     )
+
 
     # RViz2
     rviz = Node(
