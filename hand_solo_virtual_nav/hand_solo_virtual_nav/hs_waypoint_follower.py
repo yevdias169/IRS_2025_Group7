@@ -87,7 +87,7 @@ def main():
     # 3. Go to first waypoint
     send_and_wait(wp1)
     wait_seconds = 3
-    node.get_logger().info(f'Waiting {wait_second:.0f} seconds at waypoint 1..')
+    node.get_logger().info(f'Waiting {wait_seconds:.0f} seconds at waypoint 1..')
     time.sleep(wait_seconds)
 
     send_and_wait(wp2)
@@ -105,7 +105,7 @@ def main():
     send_and_wait(wp5)
     node.get_logger().info(f'Waiting {wait_seconds:.0f} seconds at waypoint 5...')
     time.sleep(wait_seconds)
-    
+
    # --- Your custom code ends here ---
 
     # 6. Shutdown node and ROS2
