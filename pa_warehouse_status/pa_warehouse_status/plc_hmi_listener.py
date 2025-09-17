@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+import json
 
 class WarehouseEavesDropper(Node):
     def __init__(self):
@@ -15,7 +16,22 @@ class WarehouseEavesDropper(Node):
 
 
     def listener_callback(self,msg):
-        self.get_logger().info(f'pss, listen up: "{msg.data}"')
+        try:
+            data = json.loads(msg.data)
+            stamp = data["stamp"]
+            box = data["box"]
+            counts = data["counts"]
+
+            print("📥 Received PLC status:")
+            print(f" ⏱ Time: {stamp['sec']}.{stamp['nanosec']}")
+            print(f" 📦📦 Box weight raw={box['weight_raw']}")
+            print(f" 📍📍 Location: {box['location']}")
+            print(f" 🔢🔢 Counts: big={counts['big']}, medium={counts['medium']}, "
+                f"small={counts['small']}, total={counts['total']}")
+            print() 
+        except Exception as e:
+            self.get_logger().erro(f"Failed to parse JSON: (e) \nRaw msg={msg.data}")
+
 
 def main (args=None):
     rclpy.init(args=args)
